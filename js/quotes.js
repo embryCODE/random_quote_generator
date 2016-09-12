@@ -15,10 +15,10 @@ var quotes = [
 		tags: ['wisdom']
 	},
 	{
-		quote: 'If it\'s worth doing, it\s worth over-doing.',
+		quote: 'If it\'s worth doing, it\'s worth over-doing.',
 		source: 'Mason Embry',
 		citation: '',
-		year: 1999,
+		year: 2014,
 		tags: ['humor']
 	},
 	{

@@ -32,7 +32,7 @@ function printQuote() {
 	
 	// Create string output
 	var stringOutput = '<p class="quote">' + randomQuote.quote + '</p>';
-	stringOutput += '<p class="source">' + randomQuote.source;
+	stringOutput += '<p class="source"> ' + randomQuote.source;
 	
 	//the following two if statements check for the presence of a value for citation and year in the array.
 	if (randomQuote.citation) {
@@ -68,5 +68,5 @@ printQuote();
 // Set loop interval
 var timer = window.setInterval(printQuote, 5000);
 
-// Button calls printQuoteOnClick() function.
+// Button calls printQuoteOnClick().
 document.getElementById('loadQuote').addEventListener("click", printQuoteOnClick, false);
