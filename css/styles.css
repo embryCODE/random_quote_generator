@@ -1,6 +1,32 @@
+/* Custom styling for random background color */
+
+.color-0 {
+	background-color: #36b55c;
+}
+
+.color-1 {
+	background-color: #6B9979;
+}
+
+.color-2 {
+	background-color: #6fcb40;
+}
+
+.color-3 {
+	background-color: #e18cff;
+}
+
+.color-4 {
+	background-color: #9246ea;
+}
+
+
+
+/* Original styling */
+
 body {
-  /*text-align: center;*/
-  background-color: #36b55c;
+  /* text-align: center; */
+  /* background-color: #36b55c; */
   color: white;
   font-family: 'Playfair Display', serif;
 }
@@ -67,7 +93,7 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: inherit;
   padding: 15px 0;
   transition: .5s ;
 }

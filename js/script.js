@@ -1,16 +1,36 @@
-// event listener to respond to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+/// VARIABLES ///
 
-// Get a random quote. The high number of the Math.random method equals the length of the quotes array.
+// Variable to keep track of quotes that have been displayed in an array.
+var displayedQuotes = [];
+var selectedQuote;
+
+
+
+/// FUNCTIONS ///
+
+// Get a random quote. The top number of the Math.random method equals the length of the quotes array.
 function getRandomQuote() {
-	var randomArrayIndex = Math.floor(Math.random() * quotes.length);
-	return quotes[randomArrayIndex];
+	
+	// Resets displayedQuotes if all quotes have been displayed once.
+	if (displayedQuotes.length === quotes.length) {displayedQuotes = [];}
+	
+	// Selects a random quote. Selects again if random quote matches already displayed quotes.
+	do {
+		var randomArrayIndex = Math.floor(Math.random() * quotes.length);
+		selectedQuote = quotes[randomArrayIndex];
+	} while (displayedQuotes.indexOf(selectedQuote) !== -1);
+	
+	return selectedQuote;
 }
 
 // Print a random quote to the 'quote-box' element.
 function printQuote() {
 	var randomQuote = getRandomQuote();
+	
+	// Add randomQuote to the displayedQuotes array so it is not displayed again.
+	displayedQuotes.push(randomQuote);
+	
+	// Create string output
 	var stringOutput = '<p class="quote">' + randomQuote.quote + '</p>';
 	stringOutput += '<p class="source">' + randomQuote.source;
 	
@@ -23,7 +43,30 @@ function printQuote() {
 	}
 	
 	document.getElementById('quote-box').innerHTML = stringOutput;
+	
+	// Change page background color by using random array index as last character in css class name. Clever, right? Haha.
+	var randomArrayIndex = Math.floor(Math.random() * 5);
+	var newBackground = 'color-' + randomArrayIndex;
+	document.getElementById('body').className = newBackground;
+	
 }
 
-// Call function to print the first quote onto the page.
+// Needed a new button click function to clear the loop interval and reset it.
+function printQuoteOnClick() {
+	window.clearInterval(timer);
+	printQuote();
+	timer = window.setInterval(printQuote, 5000);
+}
+
+
+
+/// PROGRAM ///
+
+// Call function on page load.
 printQuote();
+
+// Set loop interval
+var timer = window.setInterval(printQuote, 5000);
+
+// Button calls printQuoteOnClick() function.
+document.getElementById('loadQuote').addEventListener("click", printQuoteOnClick, false);
