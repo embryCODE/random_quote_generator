@@ -11,15 +11,15 @@ function getRandomQuote() {
 // Print a random quote to the 'quote-box' element.
 function printQuote() {
 	var randomQuote = getRandomQuote();
-	var stringOutput = '<p class="quote">' + randomQuote.quote + '</p>'
-	stringOutput += '<p class="source">' + randomQuote.source
+	var stringOutput = '<p class="quote">' + randomQuote.quote + '</p>';
+	stringOutput += '<p class="source">' + randomQuote.source;
 	
 	//the following two if statements check for the presence of a value for citation and year in the array.
 	if (randomQuote.citation) {
-		stringOutput += '<span class="citation"> ' + randomQuote.citation + '</span>'
+		stringOutput += '<span class="citation"> ' + randomQuote.citation + '</span>';
 	}
 	if (randomQuote.year) {
-		stringOutput += '<span class="year"> ' + randomQuote.year + '</span> </p>'
+		stringOutput += '<span class="year"> ' + randomQuote.year + '</span> </p>';
 	}
 	
 	document.getElementById('quote-box').innerHTML = stringOutput;
