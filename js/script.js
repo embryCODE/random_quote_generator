@@ -49,7 +49,7 @@ function printQuote() {
 	if (backgroundColors.length === 0) {
 		backgroundColors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
 	}
-	var lastRandomArrayIndex = randomArrayIndex;
+	var lastRandomArrayIndex = randomArrayIndex; // Ensures new loop through colors starts on different color
 	do {
 		var randomArrayIndex = Math.floor(Math.random() * backgroundColors.length);
 	} while (randomArrayIndex === lastRandomArrayIndex)
