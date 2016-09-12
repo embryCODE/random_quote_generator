@@ -3,6 +3,7 @@
 // Variable to keep track of quotes that have been displayed in an array.
 var displayedQuotes = [];
 var selectedQuote;
+var backgroundColors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
 
 
 
@@ -44,10 +45,17 @@ function printQuote() {
 	
 	document.getElementById('quote-box').innerHTML = stringOutput;
 	
-	// Change page background color by using random array index as last character in css class name. Clever, right? Haha.
-	var randomArrayIndex = Math.floor(Math.random() * 5);
-	var newBackground = 'color-' + randomArrayIndex;
-	document.getElementById('body').className = newBackground;
+	// Change page background color and make sure all colors are cycled through before repeating.
+	if (backgroundColors.length === 0) {
+		backgroundColors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5'];
+	}
+	var lastRandomArrayIndex = randomArrayIndex;
+	do {
+		var randomArrayIndex = Math.floor(Math.random() * backgroundColors.length);
+	} while (randomArrayIndex === lastRandomArrayIndex)
+	var randomBackground = backgroundColors[randomArrayIndex];
+	document.getElementById('body').className = randomBackground;
+	backgroundColors.splice(randomArrayIndex, 1);
 	
 }
 
