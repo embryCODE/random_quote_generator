@@ -65,7 +65,7 @@ var quotes = [
 		tags: ['humor']
 	},
 	{
-		quote: 'All my heart and all my soul, every last bit of it. If there is a part of me that knows how to love you, it does...forever.',
+		quote: 'All my heart and all my soul, every last bit of it. If there is a part of me that knows how to love you, it does... forever.',
 		source: 'Ashley Hertzog Embry',
 		citation: 'Letters To My Papa',
 		year: 2016,
