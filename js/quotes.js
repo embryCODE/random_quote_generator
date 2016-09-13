@@ -37,21 +37,21 @@ var quotes = [
 		source: 'Mr. Furious',
 		citation: 'Mystery Men',
 		year: 1999,
-		tags: ['movies', 'humor']
+		tags: ['movie', 'humor']
 	},
 	{
 		quote: 'Listen, strange women lyin\' in ponds distributin\' swords is no basis for a system of government.',
 		source: 'Dennis',
 		citation: 'Monty Python and the Holy Grail',
 		year: 1975,
-		tags: ['movies', 'humor']
+		tags: ['movie', 'humor']
 	},
 	{
 		quote: 'He who questions his training only trains himself at asking questions.',
 		source: 'The Sphinx',
 		citation: 'Mystery Men',
 		year: 1999,
-		tags: ['movies', 'humor']
+		tags: ['movie', 'humor']
 	},
 	{
 		quote: 'Whenever you find yourself on the side of the majority, it is time to pause and reflect.',
@@ -63,6 +63,13 @@ var quotes = [
 		source: 'Homer Simpson',
 		citation: 'The Simpsons',
 		tags: ['humor']
+	},
+	{
+		quote: 'All my heart and all my soul, every last bit of it. If there is a part of me that knows how to love you, it does...forever.',
+		source: 'Ashley Hertzog Embry',
+		citation: 'Letters To My Papa',
+		year: 2016,
+		tags: ['book']
 	}
 	
 ];
