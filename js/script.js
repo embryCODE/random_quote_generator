@@ -1,6 +1,7 @@
 var displayedQuotes = []; // Variable to keep track of quotes that have been displayed in an array.
 var selectedQuote;
 var backgroundColors = [];
+var timer
 
 
 
@@ -57,11 +58,8 @@ function printQuoteOnClick() {
 
 
 
-// CALL FUNCTION on page load.
-printQuote();
-
-// SET LOOP INTERVAL.
-var timer = window.setInterval(printQuote, 5000);
+// LOAD FIRST QUOTE. Call printQuoteOnClick() on page load for first quote.
+printQuoteOnClick();
 
 // BUTTON calls printQuoteOnClick().
 document.getElementById('loadQuote').addEventListener("click", printQuoteOnClick, false);
