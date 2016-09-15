@@ -53,7 +53,7 @@ function printQuote() {
 function printQuoteOnClick() {
 	window.clearInterval(timer);
 	printQuote();
-	timer = window.setInterval(printQuote, 5000);
+	timer = window.setInterval(printQuote, 10000);
 }
 
 
